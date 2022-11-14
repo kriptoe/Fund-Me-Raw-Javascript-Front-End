@@ -1,0 +1,33 @@
+https://hardhat.org/tutorial/testing-contracts
+https://www.youtube.com/watch?v=gyMwXuJrbJQ -- tutorial html JavaScript
+
+Add prettier yarn add --dev prettier
+npx hardhat test
+
+npx hardhat run scripts/deploy.js           --network
+npx hardhat run scripts/test2.js --network matic
+npx hardhat run scripts/test3.js --network arbitrum
+
+npx hardhat node
+
+npx hardhat run scripts/wallet.js
+
+import { ethers } from "ethers";
+
+const wallet = ethers.Wallet.createRandom();
+
+console.log("address:", wallet.address);
+console.log("private key:", wallet.privateKey);
+console.log("mnemonic:", wallet.mnemonic.phrase);
+
+
+Using the Hardhat console
+Hardhat comes built-in with an interactive JavaScript console. 
+You can use it by running 
+   npx hardhat console:   and  
+   npx hardhat console --network mainnet
+
+balance =  await ethers.provider.getBalance("0xE90Eee57653633E7558838b98F543079649c9C2F")
+ethers.utils.formatEther(balance)
+
+npx hardhat compile
